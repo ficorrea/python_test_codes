@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <br>
+    <br>
+    <title>Cadastrar Produto</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+	<div class="content">
+    	<div class="header">
+        	<div class="pure-menu pure-menu-open pure-menu-fixed pure-menu-horizontal">
+            	<a class="pure-menu-heading" href="">Mortugás</a>
+            	<ul>                          
+                	<li><a href="contato.html">Contato</a></li>
+            	</ul>
+        	</div>
+    	</div>
+    	<div class="splash">
+        	<div class="pure-g-r">
+            	<div class="pure-u-1">
+                	<div class="l-box splash-text">
+                    	<h1 class="splash-head">
+                    	<center>
+                        	Login
+                    	</center>                        
+                    	</h1>
+                        <div class="pure-g-r content-ribbon">
+    <div class="pure-u-1">
+        <h2>Informe seus dados</h2>
+        <form class="pure-form pure-form-stacked" method="post">
+            {% csrf_token %}
+            <fieldset>
+                {{ form.non_field_errors }}
+
+                {% for field in form %}
+                <div class="pure-control-group">
+                    {{ field.label_tag }}
+                    {{ field }}
+                    {{ field.errors }}
+                </div>
+                {% endfor %}
+
+                <div class="pure-controls">
+                    <button type="submit" class="pure-button pure-button-primary">Entrar</button>
+                </div>
+            </fieldset>
+            <p>
+                Não é cadastrado? <a href="{% url 'accounts:register' %}" title="">Cadastre-se</a> <br />
+                Esqueceu a senha? <a href="{% url 'accounts:password_reset' %}" title="">Nova senha</a> <br />
+            </p>
+        </form>
+    </div>
+</div>
+<div class="footer">
+        Mortugás 2017
+    </div>
+</body>
+</html>
