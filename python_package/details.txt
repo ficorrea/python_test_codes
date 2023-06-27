@@ -1,0 +1,6 @@
+Baseado no artigo: https://www.freecodecamp.org/portuguese/news/como-criar-o-seu-primeiro-pacote-em-python/
+
+Usando Linux tive que adicionar um "." em frente a cada import no __init__.py
+
+Para instalação do pacote funcionar via testpipy usei o seguinte cmd: python3 -m pip install --index-url https://test.pypi.org/simple/ your-package
+Baseado no artigo: https://packaging.python.org/pt_BR/latest/guides/using-testpypi/
