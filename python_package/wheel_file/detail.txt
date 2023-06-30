@@ -1,0 +1,12 @@
+Arquivo de setup.py no mesmo nível da pasta do projeto
+ou direcionamento
+
+Criar
+- python setup.py bdist_wheel
+
+Instalar
+- pip install file.whl
+
+
+Referências 
+https://www.youtube.com/watch?v=5KEObONUkik

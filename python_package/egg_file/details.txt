@@ -1,0 +1,13 @@
+Arquivo de setup.py no mesmo nível da pasta de projeto ou definir caminho
+
+Criar
+- python setup.py bdist_egg
+
+Instalação
+- buscar arquivo dentro da pasta dist gerada com a criação do egg
+- easy_install file.egg
+
+Referências
+https://python101.pythonlibrary.org/chapter38_eggs.html
+https://www.delftstack.com/howto/python/python-install-egg/
+https://hinty.io/ivictbor/create-an-egg-file-example/
